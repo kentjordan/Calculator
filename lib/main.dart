@@ -61,7 +61,7 @@ class _CalculatorState extends State<Calculator> {
                       scrollDirection: Axis.horizontal,
                       child: Text(
                         realTimeInput(),
-                                 overflow: TextOverflow.fade,
+                        overflow: TextOverflow.fade,
                         style: GoogleFonts.roboto(
                           fontSize: textInputSize,
                           color: Colors.black,
@@ -831,6 +831,34 @@ class _CalculatorState extends State<Calculator> {
                 ),
               ),
             ),
+            Padding(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(18),
+                    child: Text(
+                      'Made with Flutter by Kent John Jordan :>',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'I\'m reworking this app on React JS, expect some future updates.',
+                    style: TextStyle(fontSize: 14),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'This app is under development, expect some bugs.',
+                    style: TextStyle(fontSize: 14),
+                  ),
+                ],
+              ),
+              padding: EdgeInsets.all(24),
+            )
           ],
         ),
       ),
@@ -912,7 +940,6 @@ void logic(String btn) {
   }
 
   print(inputData);
-
 }
 
 String realTimeInput() {
